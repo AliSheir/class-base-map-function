@@ -1,40 +1,45 @@
-import React , {Component} from 'react';
-import './App.css';
-import Header from './components/Header';
+import React ,{Component} from 'react';
+
+
 
 class App extends Component{
   state = [
-    {name : "ali", age : 20, class : 13,},
-    {name : "hamza", age : 23, class : 13,},
-    {name : "sher", age : 22, class : 13,},
-    {name : "umer", age : 20, class : 13,},
-    {name : "hassan", age : 25, class : 13,},
-  ]
-render(){
-var number = 125;
-return <div>
-{<Header />}
-<h1>ali sher</h1> <br/>
-{number}
-{this.state.map(function(item){
-
-return <div>
-<div className='a'>  your name is {item.name} </div> <br/>
-<div className='b'>your age is { item.age} </div> <br/>
-<div className='c'> your class is {item.class} </div> <br/>
+      {  name : "Ali Hamza", age : 20, number : 82},
+      {  name : "Hassan", age : 20, number : 45},
+      {  name : "Sheraz", age : 20, number : 55},
+      {  name : "Mustafa", age : 21, number : 50},
+      {  name : "Ahmad Raza", age : 24, number : 72},
+      {  name : "Umair", age : 22, number : 37},
+      { name : "Awais", age : 24, number : 46},
+      {  name : "Numan", age : 21, number : 78},
+     { name : "Rashid", age : 20, number : 51},
+      {  name : "Anwar", age : 23, number : 59},
+      {  name : "Faisal", age : 22, number : 49},
+      {  name : "Zehraan", age : 19, number : 80},
+      {  name : "Qasim", age : 23, number : 70},
+    
+    ]
+ 
+  render(){
+    
+return(
+<div>
+{
+  this.state.map((item) =>{
+    return(
+      <div>{item.name} <br/>
+      {item.age} <br/>
+      {item.number}
+      </div>
+    )
+  })
+}
+ 
 </div>
+)
 
-}
-  )}
-
-
-</div>
-
-
+  }
 }
 
-
-
-}
 
 export default App;
